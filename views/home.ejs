@@ -4,4 +4,10 @@
 
 <p> <%= homeStartingContent %> </p>
 
+<% posts.forEach(function(element) { %>
+<h1><%- element.title %></h1>
+<p><%- element.content.substr(0,100) + "..." %> <a href= <%- element.link %> >Read More</a></p>
+
+<% }) %>
+
 <%- include('partials/footer.ejs') %>
